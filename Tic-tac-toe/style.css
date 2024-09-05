@@ -1,0 +1,43 @@
+body{
+    background-color: rgb(97, 57, 57);
+
+}
+/* for reset button */
+/* .btn{
+    background-color: rgb(36, 67, 90);
+    padding: 10px 30px;
+    color: aliceblue;
+    font-size: 20px;
+    border: 2px solid black;
+    align-content: center;
+} */
+
+
+.main{
+    padding: 75px 75px;
+    padding-bottom: 20px;
+    display: flexbox;
+    flex-wrap: wrap;
+}
+.one{
+    display: flex;
+    
+}
+.space{
+    background-color: rgb(179, 184, 184);
+    border: 5px solid black;
+    min-width: 125px;
+    height: 125px;
+}
+/* .hidden{
+    display: none;
+} */
+
+
+.turn{
+    display: none;
+    font-size: 40px;
+}
+.player--active{
+    display: block;
+}

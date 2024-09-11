@@ -52,15 +52,23 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
-    //RESENT BUTTON
+    // RESET BUTTON
     
-    // btn.addEventListener('click',function(){
-    //     let mark = "X";
-    //     let count = 9;
-    //     player1.classList.add('player--active');
-    //     space.textContent === "" ;
+    btn.addEventListener('click',function(){
+        // let mark = "X";
+        // let count = 9;
+        // player1.classList.add('player--active');
+        space.forEach(space => {
+            space.innerHTML = "";  // Remove the "X" and "O" marks
+        });
+        player1.classList.add('player--active');
+        player2.classList.remove('player--active');
+        result.innerHTML = "";
+        document.body.style.backgroundColor = "";
+        main.style.opacity = "1";
+        count = 9;
 
-    // })
+    })
 
     function checkwinner(){
         if(space0.textContent!=""  && space0.textContent=== space1.textContent && space1.textContent === space2.textContent){

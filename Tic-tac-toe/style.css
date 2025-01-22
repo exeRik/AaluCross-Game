@@ -1,15 +1,30 @@
 body{
-    background-color: rgb(97, 57, 57);
+    /* background-color: #FFF1DB; */
+     background-color: rgb(117, 0, 33);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center ;
+    text-align: center;
+    color: aliceblue;
 
 }
 /* for reset button */
 .btn{
-    background-color: rgb(36, 67, 90);
-    padding: 10px 30px;
-    color: aliceblue;
+    background-color: rgb(164, 160, 160);
+    padding: 5px 10px;
+    color: rgb(0, 0, 0);
     font-size: 20px;
-    border: 2px solid black;
+    border: 3px solid rgb(14, 10, 10);
     align-content: center;
+    border-radius: 10px;
+    align-self: flex-start;
+    cursor: pointer;
+
+}
+.btn:hover{
+    background-color: #95908d;
+    transform: scale(1.05);
 }
 
 
@@ -24,10 +39,13 @@ body{
     
 }
 .space{
-    background-color: rgb(179, 184, 184);
-    border: 5px solid black;
+    /* background-color:#ca8e65; */
+    background-color:#c5c5c5;
+    border: 2px solid rgba(0, 0, 0, 0.971);
     min-width: 125px;
     height: 125px;
+    border-radius: 5px;
+    box-shadow: 3px 3px 5px rgb(24, 5, 5);
 }
 /* .hidden{
     display: none;
@@ -40,4 +58,5 @@ body{
 }
 .player--active{
     display: block;
+    
 }

@@ -26,14 +26,17 @@ document.addEventListener('DOMContentLoaded', () => {
             // space.textContent= "X";
             if (space.textContent === "" && count > 0) {  // Ensure space is empty and game is not over
                 if (player1.classList.contains('player--active')) {
-                    space.innerHTML = "<h1 style='background-color: rgb(179, 184, 184); font-size:60px; color: rgb(117, 0, 33)'>X</h1>";
-                    // document.body.innerHTML = "<div style= 'background-color:rgb(179, 184, 184)></div>"
+                    space.innerHTML = "<h1 style='font-size:60px; color: rgb(117, 0, 33)'>X</h1>";
+                    document.body.style.backgroundColor = " rgb(11, 14, 61)";
+                    document.body.style.color = " rgb(220, 220, 220)";
                     player1.classList.remove('player--active');
                     player2.classList.add('player--active');
                     mark = "0";  // Switch mark for the next click
                     
                 } else if (player2.classList.contains('player--active')) {
-                    space.innerHTML = "<h1 style='background-color: rgb(179, 184, 184); font-size:60px; color: rgb(11, 14, 61)'>0</h1>";
+                    space.innerHTML = "<h1 style=' font-size:60px; color: rgb(11, 14, 61)'>0</h1>";
+                    document.body.style.backgroundColor = " rgb(117, 0, 33)";
+                    document.body.style.color = " rgb(220, 220, 220)";
                     player2.classList.remove('player--active');
                     player1.classList.add('player--active');
                     mark = "X";  // Switch mark for the next click
@@ -46,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if(space.textContent != "" && count <= 0){
                 document.body.style.backgroundColor="rgb(56, 121, 54)";
                 player2.classList.remove('player--active');
-                result.innerHTML = "<h1 style='background-color: rgb(56, 121, 54); font-size: 40px; color: rgb(117, 0, 33) paddingLeft: 70px'>DRAW!!</h1>";
+                result.innerHTML = "<h1 style='background-color: rgb(56, 121, 54); font-size: 35px; color: rgb(117, 0, 33) textAlign: center'>DRAW!!</h1>";
                 main.style.opacity="0.4"
                 btn.classList.remove('hidden');
             }
@@ -58,13 +61,14 @@ document.addEventListener('DOMContentLoaded', () => {
         // let mark = "X";
         // let count = 9;
         // player1.classList.add('player--active');
+        document.body.style.backgroundColor = " rgb(117, 0, 33)";
         space.forEach(space => {
             space.innerHTML = "";  // Remove the "X" and "O" marks
         });
         player1.classList.add('player--active');
         player2.classList.remove('player--active');
+        btn.style.backgroundColor = 'rgb(255, 255, 255)';
         result.innerHTML = "";
-        document.body.style.backgroundColor = "";
         main.style.opacity = "1";
         count = 9;
 
@@ -103,20 +107,24 @@ document.addEventListener('DOMContentLoaded', () => {
         if (player1.classList.contains('player--active')){
             console.log("Player2 win!")
             player1.classList.remove('player--active');
-            result.innerHTML = "<h1 style='background-color: rgb(179, 184, 184); font-size: 40px; color: rgb(11, 14, 61);'>PLAYER 2 WON!!🥳</h1>";
+            result.innerHTML = "<h1 style=' font-size: 40px; color: rgb(255, 255, 255);'>PLAYER 2 WON!!🥳</h1>";
+            document.body.style.backgroundColor = " rgb(11, 14, 61)";
             main.style.opacity="0.4"
             main.style.opacity="0.4"
             btn.classList.remove('hidden');
+            btn.style.backgroundColor = 'rgb(255, 255, 255)';
 
             
         }
         else{
             console.log("Player1 win!")
             player2.classList.remove('player--active');
-            result.innerHTML = "<h1 style='background-color: rgb(179, 184, 184); font-size: 40px; color: rgb(117, 0, 33)'>PLAYER 1 WON!!🥳</h1>";
+            result.innerHTML = "<h1 style=' font-size: 40px; color: rgb(255, 255, 255)'>PLAYER 1 WON!!🥳</h1>";
+            document.body.style.backgroundColor = " rgb(117, 0, 33)";
             main.style.opacity="0.4"
             main.style.opacity="0.4"
             btn.classList.remove('hidden');
+            btn.style.backgroundColor = 'rgb(255, 255, 255)';
         }
         
     }
